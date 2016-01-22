@@ -1,14 +1,14 @@
 {
-  "name": "nanocyte-component-octoblu-credentials-request-formatter",
+  "name": "nanocyte-component-octoblu-credentials-message-formatter",
   "version": "1.0.0",
-  "description": "Nanocyte component octoblu-credentials-request-formatter",
+  "description": "Nanocyte component octoblu-credentials-message-formatter",
   "keywords": [
     "nanocyte",
     "octoblu",
     "meshblu"
   ],
-  "homepage": "https://github.com/octoblu/nanocyte-component-octoblu-credentials-request-formatter",
-  "bugs": "https://github.com/octoblu/nanocyte-component-octoblu-credentials-request-formatter/issues",
+  "homepage": "https://github.com/octoblu/nanocyte-component-octoblu-credentials-message-formatter",
+  "bugs": "https://github.com/octoblu/nanocyte-component-octoblu-credentials-message-formatter/issues",
   "author": {
     "name": "Octoblu",
     "url": "https://github.com/octoblu"
@@ -16,7 +16,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/octoblu/nanocyte-component-octoblu-credentials-request-formatter.git"
+    "url": "https://github.com/octoblu/nanocyte-component-octoblu-credentials-message-formatter.git"
   },
   "scripts": {
     "test": "istanbul cover _mocha -- -R spec --require coffee-coverage/register-istanbul"
