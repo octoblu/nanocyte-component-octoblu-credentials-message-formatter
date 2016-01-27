@@ -3,7 +3,7 @@ ReturnValue = require 'nanocyte-component-return-value'
 class OctobluCredentialsMessageFormatter extends ReturnValue
   onEnvelope: ({config}) =>
     return {
-      devices: [config.deviceId]
+      devices: [config.deviceId || 'c339f6ce-fe26-4788-beee-c97605f50403']
       topic: 'get-credentials'
       payload:
         nodeId: config.id
