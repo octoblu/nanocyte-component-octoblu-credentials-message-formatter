@@ -1,13 +1,16 @@
 ReturnValue = require 'nanocyte-component-return-value'
 
 class OctobluCredentialsMessageFormatter extends ReturnValue
-  onEnvelope: ({config,message}) =>
+  constructor: (@metadata)->
+    super @metadata
+
+  onEnvelope: ({config}) =>
     return {
       devices: [config.deviceId || 'c339f6ce-fe26-4788-beee-c97605f50403']
       topic: 'get-credentials'
       payload:
         nodeId: config.id
-        messageId: message.messageId
+        messageId: @metadata.transactionId
     }
 
 module.exports = OctobluCredentialsMessageFormatter

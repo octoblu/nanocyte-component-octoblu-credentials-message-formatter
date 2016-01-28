@@ -3,7 +3,8 @@ OctobluCredentialsMessageFormatter = require '../src/octoblu-credentials-message
 
 describe 'OctobluCredentialsMessageFormatter', ->
   beforeEach ->
-    @sut = new OctobluCredentialsMessageFormatter
+    @metadata = {}
+    @sut = new OctobluCredentialsMessageFormatter @metadata
 
   it 'should exist', ->
     expect(@sut).to.be.an.instanceOf ReturnValue
@@ -11,12 +12,11 @@ describe 'OctobluCredentialsMessageFormatter', ->
   describe '->onEnvelope', ->
     describe 'when called with an envelope', ->
       beforeEach ->
+        @metadata.transactionId = 'transaction-id'
         @result = @sut.onEnvelope
           config:
             deviceId: 'credential-service-uuid'
             id: 'node-uuid'
-          message:
-            messageId: 'message-uuid'
 
       it 'should return the message', ->
         expect(@result).to.deep.equal
@@ -24,4 +24,4 @@ describe 'OctobluCredentialsMessageFormatter', ->
           topic: 'get-credentials'
           payload:
             nodeId: 'node-uuid'
-            messageId: 'message-uuid'
+            transactionId: 'transaction-id'
