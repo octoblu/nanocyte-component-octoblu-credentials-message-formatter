@@ -10,7 +10,7 @@ class OctobluCredentialsMessageFormatter extends ReturnValue
       topic: 'get-credentials'
       payload:
         nodeId: config.id
-        messageId: @metadata.transactionId
+        transactionId: @metadata.transactionId
     }
 
 module.exports = OctobluCredentialsMessageFormatter
