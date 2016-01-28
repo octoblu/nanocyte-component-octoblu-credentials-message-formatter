@@ -15,6 +15,8 @@ describe 'OctobluCredentialsMessageFormatter', ->
           config:
             deviceId: 'credential-service-uuid'
             id: 'node-uuid'
+          message:
+            messageId: 'message-uuid'
 
       it 'should return the message', ->
         expect(@result).to.deep.equal
@@ -22,3 +24,4 @@ describe 'OctobluCredentialsMessageFormatter', ->
           topic: 'get-credentials'
           payload:
             nodeId: 'node-uuid'
+            messageId: 'message-uuid'
